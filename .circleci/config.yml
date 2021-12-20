@@ -6,16 +6,16 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.7.1-alpine
+      - image: circleci/ruby:2.7
     working_directory: ~/circleCI_root/api
     steps:
       - checkout:
-          path: ~/circleCI_root/api
+          path: ~/circleCI_root
       - ruby/install-deps
 
   test:
     docker:
-      - image: circleci/ruby:2.7-node
+      - image: circleci/ruby:2.7
       - image: circleci/postgres:12.3-alpine
         environment:
           POSTGRES_USER: postgres
@@ -40,7 +40,7 @@ jobs:
 
 workflows:
   version: 2
-  test_and_deploy:
+  build_and_test:
     jobs:
       - build
       - test:
