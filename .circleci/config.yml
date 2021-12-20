@@ -6,7 +6,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.7.1-alpine
+      - image: circleCI_root/ruby:2.7.1-alpine
     working_directory: ~/circleCI_root/api
     steps:
       - checkout:
@@ -15,8 +15,8 @@ jobs:
 
   test:
     docker:
-      - image: circleci/ruby:2.7-node
-      - image: circleci/postgres:12.3-alpine
+      - image: circleCI_root/ruby:2.7-node
+      - image: circleCI_root/postgres:12.3-alpine
         environment:
           POSTGRES_USER: postgres
           POSTGRES_DB: app_test
