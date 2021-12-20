@@ -10,6 +10,7 @@ jobs:
     working_directory: ~/circleCI_root/api
     steps:
       - checkout:
+          path: ~/circleCI_root
       - ruby/install-deps
 
   test:
