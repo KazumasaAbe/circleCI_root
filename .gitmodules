@@ -1,0 +1,7 @@
+[submodule "api"]
+    path = api
+    url = git@github.com:KazumasaAbe/circleCI_api.git
+
+[submodule "front"]
+    path = front
+    url = git@github.com:KazumasaAbe/circleCI_front.git
